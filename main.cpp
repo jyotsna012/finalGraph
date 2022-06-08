@@ -52,7 +52,7 @@ int main(){
             int w;
             cout << "what is the weight of the edge" << endl;
             cin >> w;
-            aMatrix[sv-1][fv-1] = w;
+            aMatrix[fv-1][sv-1] = w;
         }
     }else if(input == 3){
         int del;
@@ -70,6 +70,21 @@ int main(){
             }
         }
             
+    }else if(input == 4){
+        int fv;
+        int sv;
+        cout << "enter the first vertex of the connection you want to delete" << endl;
+        cin >> fv;
+        cout << "enter the second vertex of the connection you want to delete" << endl;
+        cin >> sv;
+        if(aMatrix[fv-1][sv-1] == 0){
+        cout << "none to delete" << endl;
+        }
+        else{
+        aMatrix[fv-1][sv-1] = 0;
+        }
+        
+    
     }
     
   }
