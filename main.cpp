@@ -15,7 +15,7 @@ void print()
 }
 
 void addEdge(int f, int s, int w){
-        matrix[f][s] = weight;
+        amatrix[f][s] = w;
 }
 
 int main(){
@@ -46,11 +46,11 @@ int main(){
         cin >> sv;
         
         if(vertex[fv] == 0){
-            cout << "please add ur starting vertex to the vertex list by typing 1 in the main menu before you crete an edge" endl;
+            cout << "please add ur starting vertex to the vertex list by typing 1 in the main menu before you crete an edge"  << endl;
         }
         
         if(vertex[sv] == 0){
-            cout << "please add ur ending vertex to the vertex list by typing 1 in the main menu before you crete an edge" endl;
+            cout << "please add ur ending vertex to the vertex list by typing 1 in the main menu before you crete an edge" << endl;
         }
         else if(vertex[fv] == 1 && vertex[sv] == 1){
             int w;
