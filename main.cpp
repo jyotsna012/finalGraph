@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void print(int aMatrix[][20])
+void print(int aMatrix[20][20])
 {
     for (int a = 0; a < 20; a++)
     {
