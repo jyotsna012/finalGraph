@@ -54,7 +54,9 @@ int main(){
             cin >> w;
             aMatrix[sv-1][fv-1] = w;
         }
-    }else if()
+    }else if(input == 3){
+    
+    }
     
   }
   print();
