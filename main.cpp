@@ -30,8 +30,8 @@ void dijkstra(int start){
         }
     }
     cout << "ver" << endl;
-    for(int c = 0; b< numVer; b++){
-        cout << verts[numVer] << endl;
+    for(int c = 0; c < numVer; c++){
+        cout << verts[c] << endl;
     }
 }
 
@@ -103,14 +103,14 @@ int main(){
         }
         else{
         aMatrix[fv-1][sv-1] = 0;
-        }else if(input == 5){
-            dijkstra(1);
         }
+    
         
     
     }else if(input == 0){
         print();
-    }
+    }else if(input == 5){
+            dijkstra(1);
     
   }
 }
