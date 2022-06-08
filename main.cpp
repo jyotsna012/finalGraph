@@ -9,7 +9,11 @@ void print(int aMatrix[20][20])
     {
     for (int b = 0; b < 20; b++)
       {
+        if(aMatrix[a][b] == NULL){
+            cout << "0" << " ";
+        }else{
        cout << aMatrix[a][b] << " ";
+        }
       }
       cout << endl;
     }
