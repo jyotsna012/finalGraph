@@ -48,7 +48,7 @@ void dijkstra(int start){
     distance[2] = 3;
     distance[3] = 1;
     
-    vars[3][1] = 1;
+    vers[3][1] = 1;
     
     //actual algotithim
     for(int f = 0; f < numVer; f++){
