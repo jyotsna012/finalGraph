@@ -46,11 +46,11 @@ int main(){
       int name;
       cout << "name your vertex a number from 1 - 20" << endl;
       cin >> name;
-      if(vertex[name] == 1){
+      if(vertex[name] != 0){
        cout << "this name is taken, try again and choose another name between 1-20" << endl;
       }
       else{
-        vertex[name] = 1;
+        vertex[name] = name;
         }
     }else if(input == 6){
         loop = false;
