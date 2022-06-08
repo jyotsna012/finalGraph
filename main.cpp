@@ -18,7 +18,7 @@ int main(){
   bool loop = true;
   while(loop == true){
     int input;
-    cout << "type 1 to add a vertex, type 2 to add a edge, type 3 to delete a vertex, type 4 to remove an edge, type 5 to find shortest path, and type 6 to quit" << endl;
+    cout << "type 0 to print, type 1 to add a vertex, type 2 to add a edge, type 3 to delete a vertex, type 4 to remove an edge, type 5 to find shortest path, and type 6 to quit" << endl;
     cin >> input;
     
     if(input == 1){
@@ -85,8 +85,9 @@ int main(){
         }
         
     
+    }else if(input == 0){
+        print();
     }
     
   }
-  print();
 }
