@@ -17,7 +17,7 @@ void print()
 void dijkstra(int start){
     int numVer;
     for(int a = 0; a < 20; a++){
-        if(a != 0){
+        if(vertex[a] != 0){
         numVer++;
         }
     }
