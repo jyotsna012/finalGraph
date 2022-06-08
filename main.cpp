@@ -43,6 +43,13 @@ void dijkstra(int start){
         }
     }
     
+    distance[0] = 5;
+    distance[1] = 2;
+    distance[2] = 3;
+    distance[3] = 1;
+    
+    vars[3][1] = 1;
+    
     //actual algotithim
     for(int f = 0; f < numVer; f++){
         
@@ -59,7 +66,11 @@ void dijkstra(int start){
             }
         }
         
-       
+        vers[key-1][1] = 1;
+        cout << "the node with smallest distance was: " << vers[key-1][0];
+        cout << "the distance of the node is: " << distance[key-1];
+        
+        
     }
     
     /*cout << "final" << endl;
