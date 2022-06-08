@@ -53,6 +53,11 @@ void dijkstra(int start){
     //actual algotithim
     for(int f = 0; f < numVer; f++){
         
+        cout << "imp stuff" << endl;
+            for(int c = 0; c < numVer; c++){
+        cout << vers[c][0] << " " << vers[c][1] << endl;
+        cout << distance[c] << endl;
+    }
         //choose unvisited vertix with least distance
         int temp = distance[0];
         int key;
