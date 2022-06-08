@@ -15,7 +15,7 @@ void print()
 }
 
 void addEdge(int f, int s, int w){
-        aMatrix[f][s] = w;
+        aMatrix[f-1][s-1] = w;
 }
 
 int main(){
