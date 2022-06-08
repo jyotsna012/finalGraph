@@ -21,6 +21,7 @@ void dijkstra(int start){
         numVer++;
         }
     }
+    cout << "num: " << numVer << endl;
     int verts[numVer];
     int i = 0;
     for(int b = 0; b< 20; b++){
