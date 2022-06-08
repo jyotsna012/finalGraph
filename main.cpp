@@ -21,12 +21,12 @@ void dijkstra(int start){
         numVer++;
         }
     }
-    cout << "num: " << numVer << endl;
+    cout << "numbers in the vertex: " << numVer << endl;
     int verts[numVer];
     int i = 0;
     for(int b = 0; b< numVer; b++){
-        if(b != 0){
-            cout << "vertex B:" << vertex[b];
+        if(vertex[b] != 0){
+            cout << "vertex B:" << vertex[b] << endl;
             verts[i] = vertex[b];
             i++;
         }
