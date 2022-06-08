@@ -23,6 +23,13 @@ void dijkstra(int start){
     }
     
     cout << "total number of vers: " << numVer << endl;
+    int vers[numVer];
+    
+    for(int v = 0; v < 20; v++){
+        if(vertex[v] != 0){
+        cout<<vertex[v]<<endl;
+        }
+    }
 }
 
 int main(){
