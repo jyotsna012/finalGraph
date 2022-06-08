@@ -2,8 +2,8 @@
 
 using namespace std;
 
-  int aMatrix[20][20];
-
+int aMatrix[20][20];
+int vertex[20];
 void print()
 {
     for (int a = 0; a < 20; a++){
@@ -15,5 +15,23 @@ void print()
 }
 
 int main(){
+  bool loop = true;
+  while(loop == true){
+    int input;
+    cout << "type 1 to add a vertex, type 2 to add a edge, type 3 to delete a vertex, type 4 to remove an edge, type 5 to find shortest path" << endl;
+    cin >> input;
+    
+    if(input == 1){
+      int name;
+      cout << "name your vertex something from 1 - 20" << endl;
+      if(vertex[name] == 1){
+       cout << "this name is taken, choose another name between 1-20"
+      }
+      else{
+        vertex[name] = 1;
+        }
+    }
+    
+  }
   print();
 }
