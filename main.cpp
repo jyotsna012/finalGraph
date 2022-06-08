@@ -14,6 +14,10 @@ void print()
     }
 }
 
+void addEdge(int f, int s, int w){
+        matrix[f][s] = weight;
+}
+
 int main(){
   bool loop = true;
   while(loop == true){
@@ -23,7 +27,7 @@ int main(){
     
     if(input == 1){
       int name;
-      cout << "name your vertex something from 1 - 20" << endl;
+      cout << "name your vertex a number from 1 - 20" << endl;
       cin >> name;
       if(vertex[name] == 1){
        cout << "this name is taken, try again and choose another name between 1-20" << endl;
@@ -33,6 +37,27 @@ int main(){
         }
     }else if(input == 6){
         loop = false;
+    }else if(input == 2){
+        int fv;
+        int sv;
+        cout << "enter the name of your starting vertex " << endl;
+        cin >> fv;
+        cout << "enter the name of your second vertex" << endl;
+        cin >> sv;
+        
+        if(vertex[fv] == 0){
+            cout << "please add ur starting vertex to the vertex list by typing 1 in the main menu before you crete an edge" endl;
+        }
+        
+        if(vertex[sv] == 0){
+            cout << "please add ur ending vertex to the vertex list by typing 1 in the main menu before you crete an edge" endl;
+        }
+        else if(vertex[fv] == 1 && vertex[sv] == 1){
+            int w;
+            cout << "what is the weight of the edge" << endl;
+            cin >> w;
+            addEdge(fv, sv, w);
+        }
     }
     
   }
