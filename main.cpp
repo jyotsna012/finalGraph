@@ -26,6 +26,7 @@ void dijkstra(int start){
     int i = 0;
     for(int b = 0; b< numVer; b++){
         if(b != 0){
+            cout << "vertex B:" << vertex[b];
             verts[i] = vertex[b];
             i++;
         }
