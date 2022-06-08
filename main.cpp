@@ -31,6 +31,7 @@ void dijkstra(int start){
         }
     }
     cout << "ver" << endl;
+    cout << "test: " << verts[0] << endl; 
     for(int c = 0; c < numVer; c++){
         cout << verts[c] << endl;
     }
