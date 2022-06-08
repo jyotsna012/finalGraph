@@ -48,13 +48,16 @@ void dijkstra(int start){
         
         //find the smallest distance in distance list
         int temp = distance[0];
+        int key;
+        int dist;
         for(int p = 0; p < numVer; p++){
             if(temp > distance[p]){
-                temp == distance[p]
+                temp = distance[p];
             }
+            key = p;
         }
         
-        cout << "smallest distance: " << p << endl;
+        cout << "smallest key and distance: " << key << " " << temp << endl;
             
     }
     
