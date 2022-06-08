@@ -14,6 +14,27 @@ void print()
     }
 }
 
+void dijkstra(int start){
+    int numVer;
+    for(int a = 0; a < 20; a++){
+        if(a != 0){
+        numVer++;
+        }
+    }
+    int verts[numVer];
+    int i = 0;
+    for(int b = 0; b< 20; b++){
+        if(b != 0){
+            verts[i] = vertex[b];
+            i++;
+        }
+    }
+    cout << "ver" << endl;
+    for(int c = 0; b< numVer; b++){
+        cout << verts[numVer] << endl;
+    }
+}
+
 int main(){
   bool loop = true;
   while(loop == true){
@@ -82,6 +103,8 @@ int main(){
         }
         else{
         aMatrix[fv-1][sv-1] = 0;
+        }else if(input == 5){
+            dijkstra(1);
         }
         
     
