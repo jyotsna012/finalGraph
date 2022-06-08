@@ -143,7 +143,7 @@ int main(){
     }else if(input == 0){
         print();
     }else if(input == 5){
-            dijkstra(1);
+            dijkstra(9);
     }
   }
 }
