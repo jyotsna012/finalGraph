@@ -55,7 +55,21 @@ int main(){
             aMatrix[sv-1][fv-1] = w;
         }
     }else if(input == 3){
-    
+        int del;
+        cout << "enter name of vertex to delete" << endl;
+        cin >> del;
+        if(vertex[del] == 0){
+            cout << "vertex does not exisist to delete" << endl;
+        }else{
+            vertex[del] = 0;
+            for(int d = 0; d < 20; d++){
+                aMatrix[del-1][d] = 0;
+            }
+            for(int d = 0; d < 20; d++){
+                aMatrix[d][del-1] = 0;
+            }
+        }
+            
     }
     
   }
