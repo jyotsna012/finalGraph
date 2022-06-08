@@ -44,7 +44,7 @@ void dijkstra(int start){
     }
     
     //actual algotithim
-    for(int f = 0; f < numVer; f++){
+    //for(int f = 0; f < numVer; f++){
         
         //find the smallest distance in distance list
         int temp = distance[0];
@@ -57,14 +57,15 @@ void dijkstra(int start){
             key = p;
         }
         
-        cout << "smallest key and distance: " << key << " " << temp << endl;
+        //cout << "smallest key and distance: " << key << " " << temp << endl;
             
-    }
+    //}
     
-    /*cout << "final" << endl;
+    cout << "final" << endl;
     for(int c = 0; c < numVer; c++){
-        cout << vers[c][0] << " " << vers[c][1] << endl;
-    }*/
+        //cout << vers[c][0] << " " << vers[c][1] << endl;
+        cout << distance[c] << endl;
+    }
 }
 
 int main(){
