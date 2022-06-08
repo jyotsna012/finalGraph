@@ -44,28 +44,29 @@ void dijkstra(int start){
     }
     
     //actual algotithim
-    //for(int f = 0; f < numVer; f++){
+    for(int f = 0; f < numVer; f++){
         
-        //find the smallest distance in distance list
+        //choose unvisited vertix with least distance
         int temp = distance[0];
         int key;
         int dist;
         for(int p = 0; p < numVer; p++){
+            if(vers[p][1] == 0){
             if(temp > distance[p]){
                 temp = distance[p];
             }
             key = p;
+            }
         }
         
-        cout << "smallest key and distance: " << key << " " << temp << vers[key][0] << endl;
-            
-    //}
+       
+    }
     
-    cout << "final" << endl;
+    /*cout << "final" << endl;
     for(int c = 0; c < numVer; c++){
         //cout << vers[c][0] << " " << vers[c][1] << endl;
         cout << distance[c] << endl;
-    }
+    }*/
 }
 
 int main(){
