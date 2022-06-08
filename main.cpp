@@ -14,10 +14,6 @@ void print()
     }
 }
 
-void addEdge(int f, int s, int w){
-        aMatrix[s-1][f-1] = w;
-}
-
 int main(){
   bool loop = true;
   while(loop == true){
@@ -56,9 +52,9 @@ int main(){
             int w;
             cout << "what is the weight of the edge" << endl;
             cin >> w;
-            addEdge(fv, sv, w);
+            aMatrix[sv-1][fv-1] = w;
         }
-    }
+    }else if()
     
   }
   print();
