@@ -43,7 +43,20 @@ void dijkstra(int start){
         }
     }
     
-    distance
+    //actual algotithim
+    for(int f = 0; f < numVer; f++){
+        
+        //find the smallest distance in distance list
+        int temp = distance[0];
+        for(int p = 0; p < numVer; p++){
+            if(temp > distance[p]){
+                temp == distance[p]
+            }
+        }
+        
+        cout << "smallest distance: " << p << endl;
+            
+    }
     
     /*cout << "final" << endl;
     for(int c = 0; c < numVer; c++){
