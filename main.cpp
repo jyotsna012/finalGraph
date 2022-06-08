@@ -26,7 +26,7 @@ int main(){
       cout << "name your vertex something from 1 - 20" << endl;
       cin >> name;
       if(vertex[name] == 1){
-       cout << "this name is taken, choose another name between 1-20" << endl;
+       cout << "this name is taken, try again and choose another name between 1-20" << endl;
       }
       else{
         vertex[name] = 1;
