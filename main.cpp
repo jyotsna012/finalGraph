@@ -23,6 +23,8 @@ void dijkstra(int start){
     }
     
     int vers[numVer][2];
+    int distance[numVer];
+    int prev[numVer];
     
     int i = 0;
     for(int v = 0; v < 20; v++){
@@ -34,12 +36,18 @@ void dijkstra(int start){
     
     for(int c = 0; c < numVer; c++){
         vers[c][1] = 0;
-        cout << vers[c][0] << " " << vers[c][1] << endl;
+        if(vers[c][0] == start){
+            distance[c] = 0;
+        }else{
+            distance[c] = 2147483647;
+        }
     }
+    
+    distance
     
     /*cout << "final" << endl;
     for(int c = 0; c < numVer; c++){
-        cout << vers[c][0] << endl;
+        cout << vers[c][0] << " " << vers[c][1] << endl;
     }*/
 }
 
