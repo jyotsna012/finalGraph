@@ -57,7 +57,7 @@ void dijkstra(int start){
             key = p;
         }
         
-        //cout << "smallest key and distance: " << key << " " << temp << endl;
+        cout << "smallest key and distance: " << key << " " << temp << endl;
             
     //}
     
