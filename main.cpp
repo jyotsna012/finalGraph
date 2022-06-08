@@ -22,21 +22,25 @@ void dijkstra(int start){
         }
     }
     
-    cout << "total number of vers: " << numVer << endl;
-    int vers[numVer];
+    int vers[numVer][2];
     
     int i = 0;
     for(int v = 0; v < 20; v++){
         if(vertex[v] != 0){
-        vers[i] = vertex[v];
+        vers[i][0] = vertex[v];
             i++;
-        cout<<vertex[v]<<endl;
         }
     }
-    cout << "final" << endl;
+    
     for(int c = 0; c < numVer; c++){
-        cout << vers[c] << endl;
+        vers[c][1] = 0;
+        cout << vers[c][0] << " " << vers[c][1] << endl;
     }
+    
+    /*cout << "final" << endl;
+    for(int c = 0; c < numVer; c++){
+        cout << vers[c][0] << endl;
+    }*/
 }
 
 int main(){
