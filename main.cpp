@@ -21,6 +21,8 @@ void dijkstra(int start){
         numVer++;
         }
     }
+    
+    cout << "total number of vers: " << numVer << endl;
 }
 
 int main(){
