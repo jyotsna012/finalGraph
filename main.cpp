@@ -56,9 +56,7 @@ void dijkstra(int start, int end){
         }
     }
     
-    cout << "vers" << endl;
     for(int n = 0; n < numVer; n++){
-        cout << vers[n][0] << endl;
     }
     
     //actual algotithim
@@ -89,7 +87,6 @@ void dijkstra(int start, int end){
             }
         }
         
-        cout << "VISITING NODE: " << vers[key][0] << endl;
         vers[key][1] = 1;
         //cout << "the node with smallest distance was: " << vers[key][0] << endl;
         //cout << "the distance of the node is: " << distance[key] << endl;
@@ -126,7 +123,6 @@ void dijkstra(int start, int end){
         }
         
         
-        cout << "connections of Node " << smallDistVert << endl;
         for(int s = 0; s < connCount; s++){
             for(int w = 0; w < numVer; w++){
                 if(vers[w][0] == connections[s][0]){
@@ -138,7 +134,6 @@ void dijkstra(int start, int end){
                         for(int wk = 0; wk < numVer; wk++){
                             if(vers[wk][0] == smallDistVert){
                                 int tempDis = distance[wk] + connections[s][1];
-                                cout << "temp " << tempDis << endl;
                                 if(tempDis < distance[w]){
                                    distance[w] = tempDis;
                                     for(int wkk = 0; wkk < numVer; wkk++){
@@ -157,7 +152,6 @@ void dijkstra(int start, int end){
         
         
             for(int l = 0; l < numVer; l++){
-        cout << vers[l][0] << " " << distance[l] << " " << prev[l] << endl;
     }
     }
     
@@ -174,29 +168,23 @@ void dijkstra(int start, int end){
     int indexInt;
     
     while(end != 0){
-        cout << "in loop - end " << end << endl;
     for(int z = 0; z < numVer; z++){
         if(vers[z][0] == end){
             indexInt = z;
         }
     }
     path[pathInt] = prev[indexInt];
-    cout << "path index: " << path[pathInt] << endl;
     pathInt++;
     end = prev[indexInt];
     }
     
+    cout << "the path with the shortest distance is outlined" << endl;
     for(int k = pathInt-1; k >= 0; k--){
         if(path[k] != 0){
         cout << path[k] << endl;
         }
     }
     
-    cout << endl;
-    
-        for(int k = 0; k < pathInt; k++){
-        cout << path[k] << endl;
-    }
    
     
 }
