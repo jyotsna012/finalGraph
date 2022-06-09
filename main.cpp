@@ -133,13 +133,13 @@ void dijkstra(int start){
                         for(int wk = 0; wk < numVer; wk++){
                             if(vers[wk][0] == smallDistVert){
                                 int tempDis = distance[wk] + connections[s][1];
+                                cout << "temp " << tempDis << endl;
+                                if(tempDis < distance[w]){
+                                   distance[w] = tempDis;
+                                }
                             }
                         }
                      
-                        cout << "temp " << tempDis << endl;
-                        if(tempDis < distance[w]){
-                            distance[w] = tempDis;
-                        }
                     }
                 }
             }
