@@ -64,7 +64,7 @@ void dijkstra(int start){
         int dist;
         for(int p = 0; p < numVer; p++){
             if(vers[p][1] == 0){
-                cout << "hi" << endl;
+                cout << "hi the distance is: " << vers[p][0] << endl;
                 if(temp > distance[p]){
                     temp = distance[p];
                     key = p;
