@@ -185,6 +185,13 @@ void dijkstra(int start, int end){
         }
     }
     
+    for(int finalInt = 0; finalInt < numVer; finalInt++){
+        if(vers[finalInt][0] == end){
+                cout << "the shortest disatnce is: " distance[finalInt] << endl;
+        }
+    }
+    
+    
    
     
 }
