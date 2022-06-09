@@ -60,7 +60,7 @@ void dijkstra(int start){
     }*/
         //choose unvisited vertix with least distance
         int temp = distance[0];
-        int key;
+        int key = NULL;
         for(int p = 0; p < numVer; p++){
             cout << "temp: " << temp << endl;
             cout << "the vertex I am checking is: " << vers[p][0] << endl;
