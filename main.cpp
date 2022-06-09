@@ -23,7 +23,7 @@ void print()
     
 }
 
-void dijkstra(int start, int end){
+void dijkstra(int start, int end, int end2){
     int numVer;
     for(int a = 0; a < 20; a++){
         if(vertex[a] != 0){
@@ -186,7 +186,7 @@ void dijkstra(int start, int end){
     }
     
     for(int finalInt = 0; finalInt < numVer; finalInt++){
-        if(vers[finalInt][0] == end){
+        if(vers[finalInt][0] == end2){
                 cout << "the shortest disatnce is: " << distance[finalInt] << endl;
         }
     }
@@ -271,7 +271,7 @@ int main(){
     }else if(input == 0){
         print();
     }else if(input == 5){
-            dijkstra(9, 5);
+            dijkstra(9, 5,5);
     }
   }
 }
