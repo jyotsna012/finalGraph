@@ -107,17 +107,10 @@ void dijkstra(int start){
                     cout << "g is: " << g << endl;
                     cout << "vers: " << vers[w][0] << endl;
                     if(vers[w][0] == g+1){
-                        cout << "in here" << endl;
-                        cout << "w: " << w << endl;
-                        index = w;
-                        cout << "index: " << index;
-                        
+                        connections[iint] = vers[w][0];
+                        iint++;
                     }
                 }
-                connections[iint] = index;
-                cout << "index = " << index << endl;
-                cout << "iint = " << iint << endl;
-                iint++;
             }
         
         }
