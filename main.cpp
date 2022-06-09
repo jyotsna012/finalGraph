@@ -127,8 +127,13 @@ void dijkstra(int start){
             for(int w = 0; w < numVer; w++){
                 if(vers[w][0] == connections[s][0]){
                     cout << "the index of " << connections[s][0] << " in the vers array is " << w << endl;
-                    if(distance[w] > connections[s][1]){
-                            distance[w] = connections[s][1];
+                    if(distance[w] == 2147483647){
+                        distance[w] = connections[s][1];
+                    }else{
+                        int tempDis = distance[w] + connections[s][1];
+                        if(tempDis < distance[w]){
+                            distance[w] = tempDis;
+                        }
                     }
                 }
             }
