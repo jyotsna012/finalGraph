@@ -53,7 +53,7 @@ void dijkstra(int start){
     }
     
     //actual algotithim
-    for(int f = 0; f < 1; f++){
+    for(int f = 0; f < numVer; f++){
         
         //choose unvisited vertix with least distance
         int h = 0;
@@ -61,22 +61,22 @@ void dijkstra(int start){
            h++;
         }
         int temp = distance[h];
-        cout << "temp = " << temp << endl;
+        //cout << "temp = " << temp << endl;
         int key = h;
         for(int p = 0; p < numVer; p++){
-            cout << "temp: " << temp << endl;
+            /*cout << "temp: " << temp << endl;
             cout << "the vertex I am checking is: " << vers[p][0] << endl;
             cout << "visit staus is: " << vers[p][1] << endl;
-            cout << "distance is " << distance[p] << endl;
+            cout << "distance is " << distance[p] << endl;*/
             if(vers[p][1] == 0){
-                cout << "inside if because visit = 0" << endl;
-                cout << temp << " >? " << distance[p] << endl;
+                /*cout << "inside if because visit = 0" << endl;
+                cout << temp << " >? " << distance[p] << endl;*/
                 if(temp > distance[p]){
-                    cout << "inside again because temp biiger than dist" << endl;
+                    //cout << "inside again because temp biiger than dist" << endl;
                     temp = distance[p];
                     key = p;
                 }
-                cout << "the key is " << key << endl;
+                //cout << "the key is " << key << endl;
             }
         }
         
@@ -104,8 +104,10 @@ void dijkstra(int start){
             if(aMatrix[smallDistVert - 1][g] != 0){
                 for(int w = 0; w < numVer; w++){
                     if(vers[w][0] == g+1){
+                        if(vers[w][1] != 1){
                         connections[iint] = vers[w][0];
                         iint++;
+                        }
                     }
                 }
             }
