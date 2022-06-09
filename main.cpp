@@ -35,7 +35,7 @@ void dijkstra(int start){
     }
     
     for(int c = 0; c < numVer; c++){
-        vers[c][1] = 5;
+        vers[c][1] = 0;
         if(vers[c][0] == start){
             distance[c] = 0;
         }else{
@@ -48,7 +48,7 @@ void dijkstra(int start){
     distance[2] = 3;
     distance[3] = 1;
     
-    vers[2][1] = 0;
+    vers[3][1] = 5;
     
     //actual algotithim
     for(int f = 0; f < numVer; f++){
