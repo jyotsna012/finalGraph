@@ -184,7 +184,7 @@ void dijkstra(int start, int end){
     
     path[pathInt] = prev[indexInt];
     end = prev[indexInt];
-    }
+    }*/
    
     
 }
