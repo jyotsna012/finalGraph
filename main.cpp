@@ -106,8 +106,7 @@ void dijkstra(int start){
                 for(int w = 0; w < numVer; w++){
                     cout << "g is: " << g << endl;
                     cout << "vers: " << vers[w][0] << endl;
-                    if(vers[w][0] == g){
-                        cout << "in here" << endl;
+                    if(vers[w][0] == g+1){
                         index = w;
                     }
                 }
