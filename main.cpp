@@ -23,7 +23,7 @@ void print()
     
 }
 
-void dijkstra(int start){
+void dijkstra(int start, int end){
     int numVer;
     for(int a = 0; a < 20; a++){
         if(vertex[a] != 0){
@@ -161,6 +161,46 @@ void dijkstra(int start){
     }
     }
     
+    //print the path
+    int path[numVer];
+        for(int vvv = 0; vvv < numVer; vvv++){
+        path[vvv] = 0;
+    }
+    int pathInt = 0;
+    path[pathInt] = end;
+    pathInt++;
+    int IndexInt;
+    
+    while(end != 0){
+    for(int z = 0; z < numVer; z++){
+        if(vers[z][0] == end){
+            indexInt = z;
+        }
+    }
+    
+    path[pathInt] = prev[indexInt];
+    end = prev[indexInt]
+    }
+    
+    cout << "path of the shortest distance is below: " << endl;
+    
+    for(int zr = numVer-1; zr > 0; zr--){
+        if(path[zr] != 0){
+            cout << path[zr] << endl;
+        }
+        
+    }
+    int sdPath;
+        for(int zf = 0; zf < numVer; zf++){
+        if(vers[zf][0] == end){
+            sdPath = zf;
+        }
+    }
+    cout << "the shortest distance is " << distance[sdPath] << endl;
+
+    
+    
+    
 }
 
 int main(){
@@ -238,7 +278,7 @@ int main(){
     }else if(input == 0){
         print();
     }else if(input == 5){
-            dijkstra(9);
+            dijkstra(9, 5);
     }
   }
 }
