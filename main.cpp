@@ -12,6 +12,15 @@ void print()
       }
       cout << endl;
     }
+    
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    
+    for (int k = 0; k < 20; k++){
+        cout << vertex[k] << endl;
+    }
+    
 }
 
 void dijkstra(int start){
