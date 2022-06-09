@@ -60,7 +60,7 @@ void dijkstra(int start){
         }
         int temp = distance[h];
         cout << "temp = " << temp << endl;
-        int key = NULL;
+        int key = h;
         for(int p = 0; p < numVer; p++){
             cout << "temp: " << temp << endl;
             cout << "the vertex I am checking is: " << vers[p][0] << endl;
