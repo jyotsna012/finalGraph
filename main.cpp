@@ -43,13 +43,6 @@ void dijkstra(int start){
         }
     }
     
-    distance[0] = 5;
-    distance[1] = 2;
-    distance[2] = 3;
-    distance[3] = 1;
-    
-    vers[0][1] = 5;
-    
     //actual algotithim
     for(int f = 0; f < numVer; f++){
         
@@ -81,6 +74,33 @@ void dijkstra(int start){
         vers[key][1] = 1;
         cout << "the node with smallest distance was: " << vers[key][0] << endl;
         cout << "the distance of the node is: " << distance[key] << endl;
+        int smallDistVert = vers[key][0];
+        
+        //check which vertexes this has a connection to
+        
+        int index;
+        int connCount;
+        
+          for(int gg = 0; gg < 20; gg++){
+            if(aMatrix[smallDistVert][gg] != 0){
+                connCount++;    
+            }  
+        }
+        
+        int connections[connCount];
+        int iint = 0;
+        for(int g = 0; g < 20; g++){
+            if(aMatrix[smallDistVert][g] != 0){
+                for(int w = 0; w < numVer; w++){
+                    if(vers[w][0] == g){
+                        index = w;
+                    }
+                }
+                connections[iint] = index;
+                iint++;
+            }
+        
+        }
         
         
     }
