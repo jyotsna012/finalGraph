@@ -153,11 +153,11 @@ int main(){
         cout << "enter the name of your second vertex" << endl;
         cin >> sv;
         
-        if(vertex[fv] == 0){
+        if(vertex[fv-1] == 0){
             cout << "please add ur starting vertex to the vertex list by typing 1 in the main menu before you crete an edge"  << endl;
         }
         
-        if(vertex[sv] == 0){
+        if(vertex[sv-1] == 0){
             cout << "please add ur ending vertex to the vertex list by typing 1 in the main menu before you crete an edge" << endl;
         }
         else if(vertex[fv-1] != 0 && vertex[sv-1] != 0){
