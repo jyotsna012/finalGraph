@@ -58,7 +58,7 @@ void dijkstra(int start){
     }
     
     //actual algotithim
-    for(int f = 0; f < numVer; f++){
+    for(int f = 0; f < numVer-1; f++){
         
         //choose unvisited vertix with least distance
         int h = 0;
