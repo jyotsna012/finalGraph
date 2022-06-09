@@ -91,7 +91,6 @@ void dijkstra(int start){
         int connCount = 0;
         
           for(int gg = 0; gg < 20; gg++){
-              cout << "val: " << aMatrix[smallDistVert - 1][gg] << endl;
             if(aMatrix[smallDistVert - 1][gg] != 0){
                 connCount++;    
             }  
@@ -104,8 +103,6 @@ void dijkstra(int start){
         for(int g = 0; g < 20; g++){
             if(aMatrix[smallDistVert - 1][g] != 0){
                 for(int w = 0; w < numVer; w++){
-                    cout << "g is: " << g << endl;
-                    cout << "vers: " << vers[w][0] << endl;
                     if(vers[w][0] == g+1){
                         connections[iint] = vers[w][0];
                         iint++;
@@ -115,7 +112,7 @@ void dijkstra(int start){
         
         }
         
-        cout << "connections of Node: " << smallDistVert << endl;
+        cout << "connections of Node " << smallDistVert << endl;
         for(int s = 0; s < connCount; s++){
             cout << connections[s] << endl;  
         }
