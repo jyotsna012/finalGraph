@@ -180,8 +180,9 @@ void dijkstra(int start, int end){
             indexInt = z;
         }
     }
-    
     path[pathInt] = prev[indexInt];
+    cout << "path index: " << path[pathInt] << endl;
+    pathInt++;
     end = prev[indexInt];
     }
     
