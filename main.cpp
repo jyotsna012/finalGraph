@@ -184,13 +184,15 @@ void dijkstra(int start, int end){
     
     cout << "path of the shortest distance is below: " << endl;
     
-    /*for(int zr = numVer-1; zr > 0; zr--){
+    for(int zr = numVer-1; zr > 0; zr--){
         if(path[zr] != 0){
             cout << path[zr] << endl;
         }
         
-    }*/
+    }
+    
     int sdPath;
+    
         for(int zf = 0; zf < numVer; zf++){
         if(vers[zf][0] == end){
             sdPath = zf;
