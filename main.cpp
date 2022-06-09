@@ -128,6 +128,7 @@ void dijkstra(int start){
                 if(vers[w][0] == connections[s][0]){
                     if(distance[w] == 2147483647){
                         distance[w] = connections[s][1];
+                         prev[w] = smallDistVert;
                     }else{
                         cout << "in here" << endl;
                         for(int wk = 0; wk < numVer; wk++){
@@ -136,6 +137,7 @@ void dijkstra(int start){
                                 cout << "temp " << tempDis << endl;
                                 if(tempDis < distance[w]){
                                    distance[w] = tempDis;
+                                    prev[wk] = smallDistVert;
                                 }
                             }
                         }
@@ -145,7 +147,7 @@ void dijkstra(int start){
             }
         }
             for(int l = 0; l < numVer; l++){
-        cout << vers[l][0] << " " << distance[l] << endl;
+        cout << vers[l][0] << " " << distance[l] << " " << prev[l] << endl;
     }
     }
     
