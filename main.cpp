@@ -53,28 +53,22 @@ void dijkstra(int start){
     //actual algotithim
     for(int f = 0; f < numVer; f++){
         
-        /*cout << "imp stuff" << endl;
-            for(int c = 0; c < numVer; c++){
-        cout << vers[c][0] << " " << vers[c][1] << endl;
-        cout << distance[c] << endl;
-    }*/
         //choose unvisited vertix with least distance
-        int temp = distance[0];
+        int h = 0;
+        while(vers[h][1] == 1){
+           h++
+        }
+        int temp = distance[h];
         int key = NULL;
         for(int p = 0; p < numVer; p++){
-            cout << "temp: " << temp << endl;
-            cout << "the vertex I am checking is: " << vers[p][0] << endl;
-            cout << "visit staus is: " << vers[p][1] << endl;
-            cout << "distance is " << distance[p] << endl;
+     
             if(vers[p][1] == 0){
                 cout << "inside if because visit = 0" << endl;
                 cout << temp << " >? " << distance[p] << endl;
                 if(temp > distance[p]){
-                    cout << "inside again because temp biiger than dist" << endl;
                     temp = distance[p];
                     key = p;
                 }
-            cout << "the key is " << key << endl;
             }
         }
         
