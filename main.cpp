@@ -48,7 +48,7 @@ void dijkstra(int start){
     distance[2] = 3;
     distance[3] = 1;
     
-    vers[3][1] = 5;
+    vers[0][1] = 5;
     
     //actual algotithim
     for(int f = 0; f < numVer; f++){
@@ -59,11 +59,11 @@ void dijkstra(int start){
            h++;
         }
         int temp = distance[h];
+        cout << "temp = " << temp << endl;
         int key = NULL;
         for(int p = 0; p < numVer; p++){
      
             if(vers[p][1] == 0){
-                cout << "inside if because visit = 0" << endl;
                 cout << temp << " >? " << distance[p] << endl;
                 if(temp > distance[p]){
                     temp = distance[p];
