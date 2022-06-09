@@ -73,7 +73,7 @@ void dijkstra(int start){
             }
         }
         
-        vers[key-1][1] = 1;
+        vers[key][1] = 1;
         cout << "the node with smallest distance was: " << vers[key][0] << endl;
         cout << "the distance of the node is: " << distance[key] << endl;
         
