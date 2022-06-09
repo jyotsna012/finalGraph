@@ -271,7 +271,13 @@ int main(){
     }else if(input == 0){
         print();
     }else if(input == 5){
-            dijkstra(9, 5,5);
+         int fv;
+        int sv;
+        cout << "enter the start vertex" << endl;
+        cin >> fv;
+        cout << "enter the end vertex" << endl;
+        cin >> sv;
+            dijkstra(fv, sv,sv);
     }
   }
 }
