@@ -35,6 +35,10 @@ void dijkstra(int start){
     int distance[numVer];
     int prev[numVer];
     
+    for(int vv = 0; vv < 20; vv++){
+        prev[vv] = 0;
+    }
+    
     int i = 0;
     for(int v = 0; v < 20; v++){
         if(vertex[v] != 0){
@@ -153,9 +157,6 @@ void dijkstra(int start){
         
         
             for(int l = 0; l < numVer; l++){
-                if(prev[l] == NULL){
-                    prev[l] = 0;
-                }
         cout << vers[l][0] << " " << distance[l] << " " << prev[l] << endl;
     }
     }
