@@ -67,8 +67,8 @@ void dijkstra(int start){
                 cout << "hi" << endl;
                 if(temp > distance[p]){
                     temp = distance[p];
+                    key = p;
                 }
-            key = p;
             cout << "the key is " << key << endl;
             }
         }
