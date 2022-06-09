@@ -115,8 +115,8 @@ void dijkstra(int start){
         
         cout << "connections of Node: " << smallDistVert << endl;
         for(int s = 0; s < connCount; s++){
-            cout << connections[s] << endl;  */
-        }
+            cout << connections[s] << endl;  
+        }*/
         
         
     }
