@@ -129,6 +129,7 @@ void dijkstra(int start){
                     if(distance[w] == 2147483647){
                         distance[w] = connections[s][1];
                     }else{
+                        cout << "in here" << endl;
                         int tempDis = distance[w] + connections[s][1];
                         if(tempDis < distance[w]){
                             distance[w] = tempDis;
