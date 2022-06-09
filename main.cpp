@@ -125,7 +125,7 @@ void dijkstra(int start){
             cout << connections[s][0] << " " << connections[s][1] << endl;
             for(int w = 0; w < numVer; w++){
                 if(vers[w][0] == connections[s][0]){
-                    cout << "the index of " << connections[s][0] << " in the vers array is " << w;
+                    cout << "the index of " << connections[s][0] << " in the vers array is " << w << endl;
                 }
             }
         }
