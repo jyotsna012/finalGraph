@@ -53,7 +53,7 @@ void dijkstra(int start){
     }
     
     //actual algotithim
-    for(int f = 0; f < numVer; f++){
+    for(int f = 0; f < 1; f++){
         
         //choose unvisited vertix with least distance
         int h = 0;
@@ -91,6 +91,7 @@ void dijkstra(int start){
         int connCount;
         
           for(int gg = 0; gg < 20; gg++){
+              cout << "val: " << aMatrix[smallDistVert][gg] << endl;
             if(aMatrix[smallDistVert][gg] != 0){
                 connCount++;    
             }  
