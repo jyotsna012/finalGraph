@@ -161,9 +161,7 @@ void dijkstra(int start, int end){
     }
     }
     
-    
-    /*cout << "the shortest distance is " << distance[sdPath] << endl;
-
+   
     
     //print the path
     int path[numVer];
@@ -184,7 +182,7 @@ void dijkstra(int start, int end){
     
     path[pathInt] = prev[indexInt];
     end = prev[indexInt];
-    }*/
+    }
    
     
 }
