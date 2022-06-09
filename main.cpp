@@ -63,7 +63,7 @@ void dijkstra(int start){
         int key;
         for(int p = 0; p < numVer; p++){
             cout << "temp: " << temp << endl;
-            cout << "the vertex I am checking is: " << vers[p][0];
+            cout << "the vertex I am checking is: " << vers[p][0] << endl;
             cout << "visit staus is: " << vers[p][1] << endl;
             cout << "distance is " << distance[p] << endl;
             if(vers[p][1] == 0){
