@@ -160,7 +160,7 @@ int main(){
         if(vertex[sv] == 0){
             cout << "please add ur ending vertex to the vertex list by typing 1 in the main menu before you crete an edge" << endl;
         }
-        else if(vertex[fv] != 0 && vertex[sv] != 0){
+        else if(vertex[fv-1] != 0 && vertex[sv-1] != 0){
             int w;
             cout << "what is the weight of the edge" << endl;
             cin >> w;
