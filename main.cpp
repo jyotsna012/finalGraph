@@ -138,8 +138,10 @@ void dijkstra(int start){
                 }
             }
         }
-        
-        
+    }
+    
+    for(int l = 0; l < numVer; l++){
+        cout << vers[l][0] << " " << distance[l] << endl;
     }
     
 }
