@@ -1,11 +1,22 @@
+//jyotsna tera
+// june 9th
+//grapth creator
+// Can do the following: add vertex, add edge, remove vertex, remove edge, print, and find smallest distance path
+
+
 #include <iostream>
 
 using namespace std;
 
+//creates an adjaceny matrix for the graph
 int aMatrix[20][20];
+//array to store added verticies
 int vertex[20];
+
+//print function to print the adjaceny matrix and the vertexes
 void print()
 {
+    //cycles through 2d array and prints each element
     for (int a = 0; a < 20; a++){
         for (int b = 0; b < 20; b++){
        cout << aMatrix[a][b] << " ";
@@ -23,7 +34,9 @@ void print()
     
 }
 
+//function to find the path with the shortest distance
 void dijkstra(int start, int end, int end2){
+    //goes to vertex array and picks out non 0 elemnts to find how many vertexes there are
     int numVer;
     for(int a = 0; a < 20; a++){
         if(vertex[a] != 0){
@@ -31,14 +44,19 @@ void dijkstra(int start, int end, int end2){
         }
     }
     
+    //2d array stores vertex and visit status
     int vers[numVer][2];
+    //array to hold the distances
     int distance[numVer];
+    //array to hold previpus vertex
     int prev[numVer];
+    
     
     for(int vv = 0; vv < 20; vv++){
         prev[vv] = 0;
     }
     
+    //moves all non 0 items from vertex array to new vers array so no zeros and only filled spots
     int i = 0;
     for(int v = 0; v < 20; v++){
         if(vertex[v] != 0){
@@ -47,6 +65,7 @@ void dijkstra(int start, int end, int end2){
         }
     }
     
+    //sets all distances equal to infinty at start excppt the start vertex's
     for(int c = 0; c < numVer; c++){
         vers[c][1] = 0;
         if(vers[c][0] == start){
@@ -63,40 +82,33 @@ void dijkstra(int start, int end, int end2){
     for(int f = 0; f < numVer; f++){
                 
         //choose unvisited vertix with least distance
+        
+        
         int h = 0;
         while(vers[h][1] != 0){
            h++;
         }
         int temp = distance[h];
-        //cout << "temp = " << temp << endl;
         int key = h;
+        //finds the smallest distance in the distance array which has an unvisted vector
         for(int p = 0; p < numVer; p++){
-            /*cout << "temp: " << temp << endl;
-            cout << "the vertex I am checking is: " << vers[p][0] << endl;
-            cout << "visit staus is: " << vers[p][1] << endl;
-            cout << "distance is " << distance[p] << endl;*/
             if(vers[p][1] == 0){
-                /*cout << "inside if because visit = 0" << endl;
-                cout << temp << " >? " << distance[p] << endl;*/
                 if(temp > distance[p]){
-                    //cout << "inside again because temp biiger than dist" << endl;
                     temp = distance[p];
                     key = p;
                 }
-                //cout << "the key is " << key << endl;
             }
         }
         
+        //onces visited, the status changes from 0 to one
         vers[key][1] = 1;
-        //cout << "the node with smallest distance was: " << vers[key][0] << endl;
-        //cout << "the distance of the node is: " << distance[key] << endl;
+        
         int smallDistVert = vers[key][0];
         
         //check which vertexes this has a connection to
-        
         int index = NULL;
         int connCount = 0;
-        
+        //cycles trhough amatrix to see connections
           for(int gg = 0; gg < 20; gg++){
             if(aMatrix[smallDistVert - 1][gg] != 0){
                 connCount++;    
@@ -105,6 +117,7 @@ void dijkstra(int start, int end, int end2){
         
         cout << "connectioms: " << connCount << endl;
         
+        //adds all connections to an array called connections that also holds edge weight
         int connections[connCount][2];
         int iint = 0;
         for(int g = 0; g < 20; g++){
@@ -122,7 +135,8 @@ void dijkstra(int start, int end, int end2){
         
         }
         
-        
+        //finds the distance between connections and of the distance is smaller than what is in
+        //the distance array alreayd then the new value is updates
         for(int s = 0; s < connCount; s++){
             for(int w = 0; w < numVer; w++){
                 if(vers[w][0] == connections[s][0]){
@@ -203,6 +217,7 @@ int main(){
     cout << "type 0 to print, type 1 to add a vertex, type 2 to add a edge, type 3 to delete a vertex, type 4 to remove an edge, type 5 to find shortest path, and type 6 to quit" << endl;
     cin >> input;
     
+      //adding vertex
     if(input == 1){
       int name;
       cout << "name your vertex a number from 1 - 20" << endl;
@@ -213,8 +228,10 @@ int main(){
       else{
         vertex[name-1] = name;
         }
+        //exiting program
     }else if(input == 6){
         loop = false;
+        //adding edge
     }else if(input == 2){
         int fv;
         int sv;
@@ -236,6 +253,7 @@ int main(){
             cin >> w;
             aMatrix[fv-1][sv-1] = w;
         }
+        //deleting vertex
     }else if(input == 3){
         int del;
         cout << "enter name of vertex to delete" << endl;
@@ -251,7 +269,7 @@ int main(){
                 aMatrix[d][del-1] = 0;
             }
         }
-            
+           //deleting edge 
     }else if(input == 4){
         int fv;
         int sv;
@@ -267,9 +285,10 @@ int main(){
         }
     
         
-    
+    //prints matrix
     }else if(input == 0){
         print();
+        //finding shortest distance path
     }else if(input == 5){
          int fv;
         int sv;
