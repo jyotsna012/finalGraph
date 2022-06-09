@@ -109,6 +109,8 @@ void dijkstra(int start){
                     }
                 }
                 connections[iint] = index;
+                cout << "index = " << index << endl;
+                cout << "iint = " << iint << endl;
                 iint++;
             }
         
