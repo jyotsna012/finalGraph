@@ -55,7 +55,7 @@ void dijkstra(int start){
         
         //choose unvisited vertix with least distance
         int h = 0;
-        while(vers[h][1] == 1){
+        while(vers[h][1] != 0){
            h++;
         }
         int temp = distance[h];
