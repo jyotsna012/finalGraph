@@ -131,6 +131,7 @@ void dijkstra(int start){
                     }else{
                         cout << "in here" << endl;
                         int tempDis = distance[w] + connections[s][1];
+                        cout << "temp " << tempDis << endl;
                         if(tempDis < distance[w]){
                             distance[w] = tempDis;
                         }
