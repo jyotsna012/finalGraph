@@ -87,7 +87,7 @@ void dijkstra(int start){
         
         //check which vertexes this has a connection to
         
-        int index;
+        int index = NULL;
         int connCount = 0;
         
           for(int gg = 0; gg < 20; gg++){
@@ -108,7 +108,10 @@ void dijkstra(int start){
                     cout << "vers: " << vers[w][0] << endl;
                     if(vers[w][0] == g+1){
                         cout << "in here" << endl;
+                        cout << "w: " << w << endl;
                         index = w;
+                        cout << "index: " << index;
+                        
                     }
                 }
                 connections[iint] = index;
