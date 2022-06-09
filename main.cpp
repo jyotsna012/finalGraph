@@ -58,8 +58,8 @@ void dijkstra(int start){
     }
     
     //actual algotithim
-    for(int f = 0; f < numVer-1; f++){
-        
+    for(int f = 0; f < numVer; f++){
+                
         //choose unvisited vertix with least distance
         int h = 0;
         while(vers[h][1] != 0){
@@ -85,6 +85,7 @@ void dijkstra(int start){
             }
         }
         
+        cout << "VISITING NODE: " << vers[key][0] << endl;
         vers[key][1] = 1;
         //cout << "the node with smallest distance was: " << vers[key][0] << endl;
         //cout << "the distance of the node is: " << distance[key] << endl;
