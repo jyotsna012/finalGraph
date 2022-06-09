@@ -174,7 +174,7 @@ void dijkstra(int start, int end){
     int indexInt;
     
     while(end != 0){
-        cout << "in loop" << endl;
+        cout << "in loop - end " << end << endl;
     for(int z = 0; z < numVer; z++){
         if(vers[z][0] == end){
             indexInt = z;
