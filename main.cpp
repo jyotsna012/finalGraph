@@ -52,6 +52,11 @@ void dijkstra(int start){
         }
     }
     
+    cout << "vers" << endl;
+    for(int n = 0; n < numVer; n++){
+        cout << vers[n][0] << endl;
+    }
+    
     //actual algotithim
     for(int f = 0; f < numVer; f++){
         
