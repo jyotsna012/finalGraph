@@ -150,7 +150,12 @@ void dijkstra(int start){
                 }
             }
         }
+        
+        
             for(int l = 0; l < numVer; l++){
+                if(prev[l] == NULL){
+                    prev[l] = 0;
+                }
         cout << vers[l][0] << " " << distance[l] << " " << prev[l] << endl;
     }
     }
