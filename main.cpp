@@ -137,7 +137,11 @@ void dijkstra(int start){
                                 cout << "temp " << tempDis << endl;
                                 if(tempDis < distance[w]){
                                    distance[w] = tempDis;
-                                    prev[wk] = smallDistVert;
+                                    for(int wkk = 0; wkk < numVer; wkk++){
+                                        if(vers[wkk][0] == connections[s][0]){
+                                           prev[wkk] = smallDistVert;
+                                        }
+                                    }
                                 }
                             }
                         }
