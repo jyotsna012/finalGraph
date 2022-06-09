@@ -169,7 +169,7 @@ void dijkstra(int start, int end){
     int pathInt = 0;
     path[pathInt] = end;
     pathInt++;
-    int IndexInt;
+    int indexInt;
     
     while(end != 0){
     for(int z = 0; z < numVer; z++){
@@ -179,7 +179,7 @@ void dijkstra(int start, int end){
     }
     
     path[pathInt] = prev[indexInt];
-    end = prev[indexInt]
+    end = prev[indexInt];
     }
     
     cout << "path of the shortest distance is below: " << endl;
