@@ -186,7 +186,13 @@ void dijkstra(int start, int end){
     end = prev[indexInt];
     }
     
-    for(int k = pathInt; k > 0; k--){
+    for(int k = pathInt-1; k > 0; k--){
+        cout << path[k] << endl;
+    }
+    
+    cout << endl;
+    
+        for(int k = 0; k < pathInt; k++){
         cout << path[k] << endl;
     }
    
