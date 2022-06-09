@@ -86,8 +86,8 @@ void dijkstra(int start){
         }
         
         vers[key][1] = 1;
-        cout << "the node with smallest distance was: " << vers[key][0] << endl;
-        cout << "the distance of the node is: " << distance[key] << endl;
+        //cout << "the node with smallest distance was: " << vers[key][0] << endl;
+        //cout << "the distance of the node is: " << distance[key] << endl;
         int smallDistVert = vers[key][0];
         
         //check which vertexes this has a connection to
@@ -123,10 +123,8 @@ void dijkstra(int start){
         
         cout << "connections of Node " << smallDistVert << endl;
         for(int s = 0; s < connCount; s++){
-            cout << connections[s][0] << " " << connections[s][1] << endl;
             for(int w = 0; w < numVer; w++){
                 if(vers[w][0] == connections[s][0]){
-                    cout << "the index of " << connections[s][0] << " in the vers array is " << w << endl;
                     if(distance[w] == 2147483647){
                         distance[w] = connections[s][1];
                     }else{
@@ -138,10 +136,9 @@ void dijkstra(int start){
                 }
             }
         }
-    }
-    
-    for(int l = 0; l < numVer; l++){
+            for(int l = 0; l < numVer; l++){
         cout << vers[l][0] << " " << distance[l] << endl;
+    }
     }
     
 }
