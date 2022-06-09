@@ -104,8 +104,10 @@ void dijkstra(int start){
         for(int g = 0; g < 20; g++){
             if(aMatrix[smallDistVert - 1][g] != 0){
                 for(int w = 0; w < numVer; w++){
+                    cout << "g is: " << g << endl;
                     cout << "vers: " << vers[w][0] << endl;
                     if(vers[w][0] == g){
+                        cout << "in here" << endl;
                         index = w;
                     }
                 }
