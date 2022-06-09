@@ -91,8 +91,8 @@ void dijkstra(int start){
         int connCount;
         
           for(int gg = 0; gg < 20; gg++){
-              cout << "val: " << aMatrix[smallDistVert][gg] << endl;
-            if(aMatrix[smallDistVert][gg] != 0){
+              cout << "val: " << aMatrix[smallDistVert - 1][gg] << endl;
+            if(aMatrix[smallDistVert - 1][gg] != 0){
                 connCount++;    
             }  
         }
