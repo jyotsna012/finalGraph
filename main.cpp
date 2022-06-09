@@ -88,7 +88,7 @@ void dijkstra(int start){
         //check which vertexes this has a connection to
         
         int index;
-        int connCount;
+        int connCount = 0;
         
           for(int gg = 0; gg < 20; gg++){
               cout << "val: " << aMatrix[smallDistVert - 1][gg] << endl;
@@ -99,10 +99,10 @@ void dijkstra(int start){
         
         cout << "connectioms: " << connCount << endl;
         
-        /*int connections[connCount];
+        int connections[connCount];
         int iint = 0;
         for(int g = 0; g < 20; g++){
-            if(aMatrix[smallDistVert][g] != 0){
+            if(aMatrix[smallDistVert - 1][g] != 0){
                 for(int w = 0; w < numVer; w++){
                     if(vers[w][0] == g){
                         index = w;
@@ -117,7 +117,7 @@ void dijkstra(int start){
         cout << "connections of Node: " << smallDistVert << endl;
         for(int s = 0; s < connCount; s++){
             cout << connections[s] << endl;  
-        }*/
+        }
         
         
     }
