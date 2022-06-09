@@ -164,7 +164,7 @@ void dijkstra(int start, int end){
      int sdPath;
     
         for(int zf = 0; zf < numVer; zf++){
-        if(vers[zf][0] == end){
+        if(vers[zf][0] == start){
             cout<<vers[zf][0] << endl;
         }
     }
